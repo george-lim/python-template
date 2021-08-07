@@ -20,7 +20,7 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v2
     - name: Strip target version prefix
-      run: echo TARGET_VERSION=${TARGET_VERSION#refs/*/v} >> $GITHUB_ENV
+      run: echo TARGET_VERSION="${TARGET_VERSION#refs/*/v}" >> "$GITHUB_ENV"
     - name: Create release
       uses: actions/create-release@v1
       env:
